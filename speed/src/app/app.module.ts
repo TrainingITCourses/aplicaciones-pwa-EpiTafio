@@ -13,6 +13,8 @@ import { ListadoPresenterComponent } from './listado-presenter/listado-presenter
 import { EffectsModule } from '@ngrx/effects';
 import { LanzamientoEffects } from './reducers/lanzamiento.effects';
 import { HttpClientModule } from '@angular/common/http';
+import { ServiceWorkerModule } from '@angular/service-worker';
+
 
 @NgModule({
   declarations: [
@@ -29,7 +31,8 @@ import { HttpClientModule } from '@angular/common/http';
     !environment.production
       ? StoreDevtoolsModule.instrument()
       : [],
-    EffectsModule.forRoot([LanzamientoEffects])
+    EffectsModule.forRoot([LanzamientoEffects]),
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]

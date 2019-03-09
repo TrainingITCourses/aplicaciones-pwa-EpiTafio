@@ -29,12 +29,17 @@ export class ContenedorContainerComponent implements OnInit {
 
   onFiltratipo = (opcion: any) => {
     this.filtro.criterio = opcion;
+    console.log('"Criterio: "' + opcion);
   }
 
-  onGraba = () => this.store.dispatch(new Graba(this.lanzamientos));
+  onGraba = () => {
+    console.log('"Ongraba: "' );
+    this.store.dispatch(new Graba(this.lanzamientos));
+  }
 
   filtra = (searchText: any) => {
     const search = searchText.toLowerCase();
+
         if  ( 1 == this.filtro.criterio )  {
           this.store.dispatch(new PorEstados(search));
         } else if ( this.filtro.criterio == 2) {
@@ -43,7 +48,6 @@ export class ContenedorContainerComponent implements OnInit {
           this.store.dispatch(new PorTipos(search));
         } else {
           console.log('"Invalid choice"');
-          this.lanzamientos.push('¡¡¡ ELIJA CRITERIO !!! ');
         }
   }
 }

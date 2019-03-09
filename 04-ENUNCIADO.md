@@ -1,13 +1,13 @@
  Precondiciones
-	1.Partir de la aplicación del ejercicio del tema 3
+	1.Partir de la aplicaciÃ³n del ejercicio del tema 3
 	2.Mantener el uso de NgRx
-	3.Realizar todas las pruebas en modo producción
+	3.Realizar todas las pruebas en modo producciÃ³n
 Funcionalidad
 	4.Mantener la misma funcionalidad del tema 3
 	5.Mejorar la experiencia de usuario
 Requerimientos
-	6.Convertir la aplicación en una PWA y desplegarla en modo producción
-	7.Establecer grupos de caché de datos para las llamadas http:
+	6.Convertir la aplicaciÃ³n en una PWA y desplegarla en modo producciÃ³n
+	7.Establecer grupos de cachÃ© de datos para las llamadas http:
 		a.Los criterios de filtro en modo performance
 		b.Los datos de lanzamientos en modo freshness
-	8.Gestionar actualización de versiones al arrancar
+	8.Gestionar actualizaciÃ³n de versiones al arrancar
